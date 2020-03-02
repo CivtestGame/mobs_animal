@@ -31,8 +31,9 @@ mobs:register_mob("mobs_animal:cow", {
 	jump_height = 6,
 	pushable = true,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
-		{name = "mobs:leather", chance = 1, min = 0, max = 2},
+		{name = "mobs:meat_raw", chance = 1, min = 45, max = 55},
+                {name = "mobs:meat_raw", chance = 1, min = 45, max = 55},
+		{name = "mobs:leather", chance = 1, min = 25, max = 35}
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -66,6 +67,12 @@ mobs:register_mob("mobs_animal:cow", {
 		{"default:dirt_with_grass", "default:dirt", -1}
 	},
 	fear_height = 2,
+        -- cows grow up after three days
+        growup_duration = 60 * 60 * 24 * 3,
+        -- growup_duration = 60,
+        -- cows feel like breeding after three days
+        breed_duration = 60 * 60 * 24 * 3,
+        -- breed_duration = 60,
 	on_rightclick = function(self, clicker)
 
 		-- feed or tame
@@ -78,9 +85,6 @@ mobs:register_mob("mobs_animal:cow", {
 
 			return
 		end
-
-		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 60, false, nil) then return end
 
 		local tool = clicker:get_wielded_item()
 		local name = clicker:get_player_name()
@@ -137,10 +141,16 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-	chance = 8000, -- 15000
+        -- 2000 approx. equals one cow spawn per minute per player
+        -- we want one cow spawn per day
+        -- 2000 * 60 * 24 = 2880000
+        --
+        -- Important to note that cows will feel rarer because players won't
+        -- fully explore all areas that they load.
+	chance = 2880000,
 	min_height = 5,
 	max_height = 200,
-	day_toggle = true,
+	day_toggle = nil,
 })
 
 
