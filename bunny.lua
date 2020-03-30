@@ -119,10 +119,9 @@ mobs:spawn({
 	neighbors = {"group:grass"},
 	min_light = 14,
 	interval = 60,
-	chance = 10000,
-	min_height = 5,
+	chance = 5000,
+	min_height = 0,
 	max_height = 200,
-	day_toggle = true,
 })
 
 
