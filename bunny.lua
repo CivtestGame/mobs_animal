@@ -144,7 +144,7 @@ minetest.register_craftitem(":mobs:rabbit_cooked", {
 	description = S("Cooked Rabbit"),
 	inventory_image = "mobs_rabbit_cooked.png",
 	on_use = minetest.item_eat(5),
-	groups = {food_meat = 1, food_rabbit = 1, flammable = 2},
+	groups = {food_meat = 1, food_rabbit = 1, flammable = 2, food_cooked_meat = 1},
 })
 
 minetest.register_craft({
