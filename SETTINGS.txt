@@ -1,5 +1,5 @@
 
--- SETTINGS
+-- SETTINGS for crocodile.lua
 
 ENABLE_WALKERS		= true
 -- these guys are spawned on land near water, they do not
