@@ -16,8 +16,7 @@ if mobs.mod and mobs.mod == "redo" then
 	local l_model			= "crocodile.x"
 	local l_sounds			= {random = "croco"}
 	local l_egg_texture		= "default_grass.png"
-	local l_spawn_chance	= 6000
-
+	local l_spawn_chance	= 11000
 -- load settings
 	dofile(minetest.get_modpath("mobs_crocs").."/SETTINGS.txt")
 	if not ENABLE_WALKERS then
@@ -35,10 +34,10 @@ if mobs.mod and mobs.mod == "redo" then
 		mobs:register_mob("mobs_crocs:crocodile", {
 			type = "monster",
 			attack_type = "dogfight",
-			damage = 8,
+			damage = 10,
 			reach = 3,
-			hp_min = 20,
-			hp_max = 25,
+			hp_min = 40,
+			hp_max = 55,
 			armor = 200,
 			collisionbox = {-0.85, -0.30, -0.85, 0.85, 1.5, 0.85},
 			drawtype = "front",
@@ -47,20 +46,14 @@ if mobs.mod and mobs.mod == "redo" then
 			textures = l_skins,
 			visual_size = {x = 4, y = 4},
 			drops = {
-				{name = "mobs_nssm:crocodile_skin",
-				chance = 1,
-				min = 1,
-				max = 8,},
-				{name = "mobs_nssm:crocodile_tail",
-				chance = 1,
-				min = 1,
-				max = 2,},
-			},
+		{name = "mobs:meat_raw", chance = 1, min = 15, max = 25},
+		{name = "mobs:lizardskin", chance = 1, min = 10, max = 25}
+	                },
 			sounds = l_sounds,
 			fly = false,
 			floats = 0,
 			stepheight = 1,
-			view_range = 10,
+			view_range = 12,
 			water_damage = 0,
 			lava_damage = 10,
 			light_damage = 0,
@@ -79,10 +72,10 @@ if mobs.mod and mobs.mod == "redo" then
 		mobs:register_mob("mobs_crocs:crocodile_float", {
 			type = "monster",
 			attack_type = "dogfight",
-			damage = 8,
+			damage = 10,
 			reach = 2,
-			hp_min = 20,
-			hp_max = 25,
+			hp_min = 40,
+			hp_max = 55,
 			armor = 200,
 			collisionbox = {-0.638, -0.23, -0.638, 0.638, 1.13, 0.638},
 			drawtype = "front",
@@ -91,15 +84,9 @@ if mobs.mod and mobs.mod == "redo" then
 			textures = l_skins,
 			visual_size = {x=3, y=3},
 			drops = {
-				{name = "mobs_nssm:crocodile_skin",
-				chance = 1,
-				min = 1,
-				max = 8,},
-				{name = "mobs_nssm:crocodile_tail",
-				chance = 1,
-				min = 1,
-				max = 2,},
-			},
+		{name = "mobs:meat_raw", chance = 1, min = 10, max = 20},
+		{name = "mobs:lizardskin", chance = 1, min = 10, max = 25}
+	                },
 			sounds = l_sounds,
 			fly = false,
 			stepheight = 1,
