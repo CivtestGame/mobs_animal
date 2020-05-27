@@ -10,7 +10,7 @@ ENABLE_FLOATERS		= true
 -- these guys are spawned in shallow water, they float so they
 -- will follow you onto land to take a bite out of you
 
-ENABLE_SWIMMERS		= true
+ENABLE_SWIMMERS		= false
 -- these guys are spawned in shallow water, they do not float so
 -- they will only attack if you attack first (L.O.S. limitation*)
 
