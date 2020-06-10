@@ -16,6 +16,10 @@ Found in green areas (bamboo biome in ethereal) and lays eggs on flat ground, Ca
 Wanders around eating grass/wheat and can be right-clicked with empty bucket to get milk. Cows will defend themselves when hit and can be right-clicked with 8x wheat to tame and breed.
 
 ---
+### Crocodile
+Spawns near or on water and attacks players near it. Credit to Team NPX for texture and model.
+
+---
 ### Kitten
 Found on green grass these cute cats walk around and can be picked up and placed in inventory as pets or right-clicked with 4x live rats or raw fish (found in ethereal) and tamed.  They can sometimes leave you little gifts of a hairball.
 
