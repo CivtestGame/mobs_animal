@@ -10,6 +10,7 @@ mobs.intllib = S
 
 dofile(path .. "/chicken.lua") -- JKmurray
 dofile(path .. "/cow.lua") -- KrupnoPavel
+dofile(path .. "/mammoth.lua") -- R3R3R3
 dofile(path .. "/rat.lua") -- PilzAdam
 -- dofile(path .. "/sheep.lua") -- PilzAdam
 -- dofile(path .. "/warthog.lua") -- KrupnoPavel
