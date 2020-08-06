@@ -31,8 +31,8 @@ mobs:register_mob("mobs_animal:mammoth", {
 	jump_height = 6,
 	pushable = false,
 	drops = {
-		{name = "mobs:meat_raw", chance = 1, min = 75, max = 99},
-		{name = "mobs:leather", chance = 1, min = 40, max = 50}
+		{name = "mobs:meat_raw", chance = 1, min = 50, max = 50},
+		{name = "mobs:leather", chance = 1, min = 50, max = 50}
 	},
 	water_damage = 0,
 	lava_damage = 5,
@@ -71,33 +71,27 @@ mobs:register_mob("mobs_animal:mammoth", {
         attack_monster = false,
         attack_npcs = false,
         attack_players = true,
-	follow = {"farming:wheat", "default:grass_1"},
 	view_range = 16,
-
---	stay_near = {{"farming:straw", "group:grass"}, 10},
 	fear_height = 8,
-        -- cows grow up after three days
-        growup_duration = 60 * 60 * 24 * 3,
-        -- growup_duration = 60,
-        -- cows feel like breeding after three days
-        breed_duration = 60 * 60 * 24 * 3,
-        -- breed_duration = 60,
 })
 
 
 mobs:spawn({
 	name = "mobs_animal:mammoth",
-	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
-	neighbors = {"group:grass"},
+	nodes = {
+           "default:dirt_with_grass", "ethereal:green_dirt",
+           "default:permafrost", "default:snow", "default:dirt_with_dry_grass"
+        },
+	neighbors = {
+           "group:grass", "default:dirt_with_snow", "default:permafrost",
+           "default:dirt_with_dry_grass"
+        },
 	min_light = 14,
 	interval = 60,
-        -- 2000 approx. equals one cow spawn per minute per player
-        -- we want one cow spawn per day
-        -- 2000 * 60 * 24 = 2880000
-        --
-        -- Important to note that cows will feel rarer because players won't
-        -- fully explore all areas that they load.
-	chance = 2880000,
+        -- 2000 approx. equals one spawn per minute per player
+        -- we want about 2 mammoth spawns per player-day
+        -- 2000 * 60 * 12 = 1440000
+	chance = 1440000,
 	min_height = 5,
 	max_height = 200,
 	day_toggle = nil,
