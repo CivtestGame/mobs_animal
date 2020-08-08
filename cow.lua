@@ -7,6 +7,7 @@ local S = mobs.intllib
 mobs:register_mob("mobs_animal:cow", {
 	type = "animal",
 	passive = false,
+        lifetimer = 60 * 60 * 24,
 	attack_type = "dogfight",
 	attack_npcs = false,
 	reach = 2,
