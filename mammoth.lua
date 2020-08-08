@@ -15,7 +15,7 @@ mobs:register_mob("mobs_animal:mammoth", {
 	hp_max = 250,
 	armor = 500,
 	collisionbox = {-1, -0.01, -1, 1.5, 4, 1.5},
-	selectionbox = {-1.5, -0.01, -1.5, 2, 4.5, 2},
+	selectionbox = {-4.5, -0.01, -4.5, 4.5, 5.5, 4.5},
 	visual = "mesh",
 	mesh = "mobs_mammoth.b3d",
 	textures = {
@@ -26,7 +26,7 @@ mobs:register_mob("mobs_animal:mammoth", {
 		random = "mobs_cow",
 	},
 	walk_velocity = 1,
-	run_velocity = 5,
+	run_velocity = 4,
 	jump = true,
 	jump_height = 6,
 	pushable = false,
@@ -60,7 +60,7 @@ mobs:register_mob("mobs_animal:mammoth", {
 
 		punch_start = 100,
 		punch_end = 160,
-                punch_speed = 20,
+                punch_speed = 25,
 
                 die_start = 160,
                 die_end = 200,
