@@ -11,7 +11,7 @@ mobs:register_mob("mobs_animal:cow", {
 	attack_npcs = false,
 	reach = 2,
 	damage = 4,
-	hp_min = 5,
+	hp_min = 20,
 	hp_max = 20,
 	armor = 200,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.2, 0.4},
